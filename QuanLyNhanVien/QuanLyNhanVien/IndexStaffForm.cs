@@ -21,6 +21,12 @@ namespace QuanLyNhanVien
             this.btnCreate.Click += btnCreate_Click;
             this.btnDelete.Click += btnDelete_Click;
             this.grdDataStaff.DoubleClick += grdDataStaff_DoubleClick;
+            this.btnStatistic.Click += btnStatistic_Click;
+        }
+
+        void btnStatistic_Click(object sender, EventArgs e)
+        {
+            new StatisticForm().ShowDialog();
         }
 
         void grdDataStaff_DoubleClick(object sender, EventArgs e)
