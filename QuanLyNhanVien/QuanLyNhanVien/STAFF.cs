@@ -17,10 +17,10 @@ namespace QuanLyNhanVien
         public int ID { get; set; }
         public string CODE { get; set; }
         public string NAME { get; set; }
-        public Nullable<System.DateTime> BIRTHDAY { get; set; }
+        public System.DateTime BIRTHDAY { get; set; }
         public string HOMETOWN { get; set; }
-        public Nullable<int> ROOM_ID { get; set; }
-        public Nullable<int> SALARY { get; set; }
+        public int ROOM_ID { get; set; }
+        public int SALARY { get; set; }
     
         public virtual ROOM ROOM { get; set; }
     }

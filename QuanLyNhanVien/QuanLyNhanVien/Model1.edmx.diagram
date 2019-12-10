@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="24f08760ef1548f99205c897315d423e" Name="Diagram1">
-        <EntityTypeShape EntityType="MyRoomModel.ROOM" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyRoomModel.STAFF" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="MyRoomModel.FK__STAFF__ROOM_ID__1273C1CD" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyRoomModel.ROOM" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="MyRoomModel.STAFF" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="MyRoomModel.FK__STAFF__ROOM_ID__21B6055D" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
