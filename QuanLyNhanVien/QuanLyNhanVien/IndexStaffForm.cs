@@ -31,25 +31,42 @@ namespace QuanLyNhanVien
 
         void grdDataStaff_DoubleClick(object sender, EventArgs e)
         {
-            //var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
-            //var updateForm = new UpdateForm(@class.ID);
-            //updateForm.ShowDialog();
-            //this.Load();
+            var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
+            var updateForm = new UpdateForm(@class.ID);
+            updateForm.ShowDialog();
+            this.showStaFF();
         }
 
         void btnDelete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (this.grdDataStaff.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("Do you want to delete this?", "Confirm",
+                    MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
+                    this.Business.DeleteClass(@class.ID);
+                    MessageBox.Show("Delete class successfully.");
+                    this.showStaFF();
+                }
+            }
         }
 
         void btnCreate_Click(object sender, EventArgs e)
         {
-            new CreateForm().ShowDialog();
+            var createForm = new CreateForm();
+            createForm.ShowDialog();
+            this.showStaFF();
         }
 
         void IndexStaffForm_Load(object sender, EventArgs e)
         {
-            
+            this.showStaFF();
         }
+        private void showStaFF()
+        {
+            this.grdDataStaff.DataSource = this.Business.GetClasses();
+        }
+
     }
 }

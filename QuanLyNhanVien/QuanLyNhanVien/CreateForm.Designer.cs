@@ -33,7 +33,6 @@
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtRoomId = new System.Windows.Forms.TextBox();
             this.txtHomeTown = new System.Windows.Forms.TextBox();
-            this.txtBirthday = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.lblBirth = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
+            this.dtbDay = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -82,13 +82,6 @@
             this.txtHomeTown.Name = "txtHomeTown";
             this.txtHomeTown.Size = new System.Drawing.Size(274, 22);
             this.txtHomeTown.TabIndex = 23;
-            // 
-            // txtBirthday
-            // 
-            this.txtBirthday.Location = new System.Drawing.Point(119, 103);
-            this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.Size = new System.Drawing.Size(274, 22);
-            this.txtBirthday.TabIndex = 22;
             // 
             // txtName
             // 
@@ -158,17 +151,24 @@
             this.lblCode.TabIndex = 14;
             this.lblCode.Text = "Code";
             // 
+            // dtbDay
+            // 
+            this.dtbDay.Location = new System.Drawing.Point(119, 98);
+            this.dtbDay.Name = "dtbDay";
+            this.dtbDay.Size = new System.Drawing.Size(274, 22);
+            this.dtbDay.TabIndex = 28;
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 393);
+            this.Controls.Add(this.dtbDay);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtRoomId);
             this.Controls.Add(this.txtHomeTown);
-            this.Controls.Add(this.txtBirthday);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.lblSalary);
@@ -191,7 +191,6 @@
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtRoomId;
         private System.Windows.Forms.TextBox txtHomeTown;
-        private System.Windows.Forms.TextBox txtBirthday;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label lblSalary;
@@ -200,5 +199,6 @@
         private System.Windows.Forms.Label lblBirth;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.DateTimePicker dtbDay;
     }
 }
