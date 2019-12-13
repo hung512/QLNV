@@ -33,11 +33,17 @@ namespace QuanLyNhanVien
             var CODE = this.txtCode.Text;
             var BIRTHDAY = this.dtbDay.Value;
             var HOMETOWN = this.txtHomeTown.Text;
-            var ROOM_ID = int.Parse(txtRoomId.Text);
+            var ROOM_ID = (int)this.cbbRoom.SelectedValue;
             var SALARY = int.Parse(txtSalary.Text);
             this.Business.AddClass(CODE, NAME, BIRTHDAY, HOMETOWN, ROOM_ID, SALARY);
             MessageBox.Show("Create class successfully");
             this.Close();
+        }
+        void CreateForm_Load(object sender, EventArgs e)
+        {
+            this.cbbRoom.DataSource = this.Business.GetRooms();
+            this.cbbRoom.DisplayMember = "Name";
+            this.cbbRoom.ValueMember = "id";
         }
     }
 }

@@ -31,10 +31,17 @@ namespace QuanLyNhanVien
 
         void grdDataStaff_DoubleClick(object sender, EventArgs e)
         {
-            var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
-            var updateForm = new UpdateForm(@class.ID);
-            updateForm.ShowDialog();
-            this.showStaFF();
+            //var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
+            //var updateForm = new UpdateForm(@class.ID);
+            //updateForm.ShowDialog();
+            //this.showStaFF();
+            if (this.grdDataStaff.SelectedRows.Count == 1)
+            {
+                var row = this.grdDataStaff.SelectedRows[0];
+                var studentView = (StaffView)row.DataBoundItem;
+
+                new UpdateForm(studentView.id).ShowDialog();
+            }
         }
 
         void btnDelete_Click(object sender, EventArgs e)
@@ -66,6 +73,11 @@ namespace QuanLyNhanVien
         private void showStaFF()
         {
             this.grdDataStaff.DataSource = this.Business.GetClasses();
+            var students = this.Business.GetClasses();
+            var studentsviews = new StaffView[students.Length];
+            for (int i = 0; i < students.Length; i++)
+                studentsviews[i] = new StaffView(students[i]);
+            this.grdDataStaff.DataSource = studentsviews;
         }
 
     }

@@ -31,7 +31,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtSalary = new System.Windows.Forms.TextBox();
-            this.txtRoomId = new System.Windows.Forms.TextBox();
             this.txtHomeTown = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -42,6 +41,8 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.dtbDay = new System.Windows.Forms.DateTimePicker();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.cbbRoom = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -69,16 +70,9 @@
             this.txtSalary.Size = new System.Drawing.Size(274, 22);
             this.txtSalary.TabIndex = 25;
             // 
-            // txtRoomId
-            // 
-            this.txtRoomId.Location = new System.Drawing.Point(119, 167);
-            this.txtRoomId.Name = "txtRoomId";
-            this.txtRoomId.Size = new System.Drawing.Size(274, 22);
-            this.txtRoomId.TabIndex = 24;
-            // 
             // txtHomeTown
             // 
-            this.txtHomeTown.Location = new System.Drawing.Point(119, 135);
+            this.txtHomeTown.Location = new System.Drawing.Point(119, 132);
             this.txtHomeTown.Name = "txtHomeTown";
             this.txtHomeTown.Size = new System.Drawing.Size(274, 22);
             this.txtHomeTown.TabIndex = 23;
@@ -158,16 +152,24 @@
             this.dtbDay.Size = new System.Drawing.Size(274, 22);
             this.dtbDay.TabIndex = 28;
             // 
+            // cbbRoom
+            // 
+            this.cbbRoom.FormattingEnabled = true;
+            this.cbbRoom.Location = new System.Drawing.Point(119, 163);
+            this.cbbRoom.Name = "cbbRoom";
+            this.cbbRoom.Size = new System.Drawing.Size(274, 24);
+            this.cbbRoom.TabIndex = 29;
+            // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(408, 393);
+            this.Controls.Add(this.cbbRoom);
             this.Controls.Add(this.dtbDay);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSalary);
-            this.Controls.Add(this.txtRoomId);
             this.Controls.Add(this.txtHomeTown);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtCode);
@@ -189,7 +191,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtSalary;
-        private System.Windows.Forms.TextBox txtRoomId;
         private System.Windows.Forms.TextBox txtHomeTown;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtCode;
@@ -200,5 +201,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.DateTimePicker dtbDay;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ComboBox cbbRoom;
     }
 }

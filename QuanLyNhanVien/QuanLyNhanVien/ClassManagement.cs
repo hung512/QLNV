@@ -13,6 +13,11 @@ namespace QuanLyNhanVien
             var db = new MyRoomEntities();
             return db.STAFFs.ToArray();
         }
+        public ROOM[] GetRooms()
+        {
+            var db = new MyRoomEntities();
+            return db.ROOMs.ToArray();
+        }
 
         public void AddClass(string CODE, string NAME, DateTime BIRTHDAY, string HOMETOWN, int ROOM_ID, int SALARY)
         {

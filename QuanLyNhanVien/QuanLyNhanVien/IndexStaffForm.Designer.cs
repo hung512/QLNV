@@ -32,7 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDele = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStatistic = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataStaff)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -54,7 +53,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCreate,
             this.btnDelete,
-            this.btnDele,
             this.btnStatistic});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -73,12 +71,6 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(65, 24);
             this.btnDelete.Text = "Delete";
-            // 
-            // btnDele
-            // 
-            this.btnDele.Name = "btnDele";
-            this.btnDele.Size = new System.Drawing.Size(65, 24);
-            this.btnDele.Text = "Delete";
             // 
             // btnStatistic
             // 
@@ -110,7 +102,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnCreate;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
-        private System.Windows.Forms.ToolStripMenuItem btnDele;
         private System.Windows.Forms.ToolStripMenuItem btnStatistic;
     }
 }
