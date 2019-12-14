@@ -38,9 +38,9 @@ namespace QuanLyNhanVien
             if (this.grdDataStaff.SelectedRows.Count == 1)
             {
                 var row = this.grdDataStaff.SelectedRows[0];
-                var studentView = (StaffView)row.DataBoundItem;
+                var staffView = (StaffView)row.DataBoundItem;
 
-                new UpdateForm(studentView.id).ShowDialog();
+                new UpdateForm(staffView.id).ShowDialog();
             }
         }
 
@@ -52,7 +52,7 @@ namespace QuanLyNhanVien
                     MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
-                    this.Business.DeleteClass(@class.ID);
+                    this.Business.DeleteStaff(@class.ID);
                     MessageBox.Show("Delete class successfully.");
                     this.showStaFF();
                 }
@@ -72,8 +72,8 @@ namespace QuanLyNhanVien
         }
         private void showStaFF()
         {
-            this.grdDataStaff.DataSource = this.Business.GetClasses();
-            var students = this.Business.GetClasses();
+            this.grdDataStaff.DataSource = this.Business.GetStaffs();
+            var students = this.Business.GetStaffs();
             var studentsviews = new StaffView[students.Length];
             for (int i = 0; i < students.Length; i++)
                 studentsviews[i] = new StaffView(students[i]);

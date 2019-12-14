@@ -26,9 +26,14 @@ namespace QuanLyNhanVien
 
         void UpdateForm_Load(object sender, EventArgs e)
         {
-            //var @class = this.Business.GetClass(this.RoomId);
-            //this.txtCode = @class.Name;
-            //this.txtDescription.Text = @class.Description;
+            var staff = this.Business.GetStaff(this.RoomId);
+            this.txtName.Text = staff.NAME;
+            this.cbbRoom.DataSource = this.Business.GetRooms();
+            this.cbbRoom.DisplayMember = "Name";
+            this.cbbRoom.ValueMember = "ID";
+            // chạy thử ô. okey tui sửa này cái
+            // còn code homwtown vs salary i vậy hả ô
+            this.cbbRoom.SelectedValue = staff.ROOM_ID;
         }
 
         void btnCancel_Click(object sender, EventArgs e)

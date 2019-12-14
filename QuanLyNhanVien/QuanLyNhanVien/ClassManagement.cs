@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhanVien
 {
-    class ClassManagement
+    public class ClassManagement
     {
-        public STAFF[] GetClasses()
+        public STAFF[] GetStaffs()
         {
             var db = new MyRoomEntities();
             return db.STAFFs.ToArray();
@@ -19,7 +19,7 @@ namespace QuanLyNhanVien
             return db.ROOMs.ToArray();
         }
 
-        public void AddClass(string CODE, string NAME, DateTime BIRTHDAY, string HOMETOWN, int ROOM_ID, int SALARY)
+        public void AddStaff(string CODE, string NAME, DateTime BIRTHDAY, string HOMETOWN, int ROOM_ID, int SALARY)
         {
             var newClass = new STAFF();
             newClass.CODE = CODE;
@@ -33,7 +33,7 @@ namespace QuanLyNhanVien
             db.STAFFs.Add(newClass);
             db.SaveChanges();
         }
-        public void EditClass(int ID, string CODE, string NAME, DateTime BIRTHDAY, string HOMETOWN, int ROOM_ID, int SALARY)
+        public void EditStaff(int ID, string CODE, string NAME, DateTime BIRTHDAY, string HOMETOWN, int ROOM_ID, int SALARY)
         {
             var db = new MyRoomEntities();
             var oldClass = db.STAFFs.Find(ID);
@@ -48,7 +48,7 @@ namespace QuanLyNhanVien
             db.SaveChanges();
         }
 
-        public void DeleteClass(int id)
+        public void DeleteStaff(int id)
         {
             var db = new MyRoomEntities();
             var @class = db.STAFFs.Find(id);
@@ -56,7 +56,7 @@ namespace QuanLyNhanVien
             db.SaveChanges();
         }
 
-        public STAFF GetClass(int id)
+        public STAFF GetStaff(int id)
         {
             var db = new MyRoomEntities();
             return db.STAFFs.Find(id);

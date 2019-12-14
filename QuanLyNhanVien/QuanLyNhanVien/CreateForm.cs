@@ -35,8 +35,8 @@ namespace QuanLyNhanVien
             var HOMETOWN = this.txtHomeTown.Text;
             var ROOM_ID = (int)this.cbbRoom.SelectedValue;
             var SALARY = int.Parse(txtSalary.Text);
-            this.Business.AddClass(CODE, NAME, BIRTHDAY, HOMETOWN, ROOM_ID, SALARY);
-            MessageBox.Show("Create class successfully");
+            this.Business.AddStaff(CODE, NAME, BIRTHDAY, HOMETOWN, ROOM_ID, SALARY);
+            MessageBox.Show("Tao moi thanh cong");
             this.Close();
         }
         void CreateForm_Load(object sender, EventArgs e)
