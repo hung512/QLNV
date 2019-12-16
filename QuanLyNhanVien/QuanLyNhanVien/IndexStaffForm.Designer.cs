@@ -33,6 +33,7 @@
             this.btnCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStatistic = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataStaff)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCreate,
             this.btnDelete,
-            this.btnStatistic});
+            this.btnStatistic,
+            this.sortToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(552, 28);
@@ -77,6 +79,12 @@
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Size = new System.Drawing.Size(73, 24);
             this.btnStatistic.Text = "Statistic";
+            // 
+            // sortToolStripMenuItem
+            // 
+            this.sortToolStripMenuItem.Name = "sortToolStripMenuItem";
+            this.sortToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.sortToolStripMenuItem.Text = "Sort";
             // 
             // IndexStaffForm
             // 
@@ -103,5 +111,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnCreate;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private System.Windows.Forms.ToolStripMenuItem btnStatistic;
+        private System.Windows.Forms.ToolStripMenuItem sortToolStripMenuItem;
     }
 }
