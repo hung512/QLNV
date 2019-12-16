@@ -44,7 +44,15 @@ namespace QuanLyNhanVien
 
         void btnSave_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var NAME = this.txtName.Text;
+            var BIRTHDAY = this.dtpDay.Value;
+            var CODE = this.txtCode.Text;
+            var HOMETOWN = this.txtHomeTown.Text;
+            var SALARY = int.Parse(this.txtSalary.Text);
+            var ROOM_ID = (int)this.cbbRoom.SelectedValue;
+            this.Business.EditStaff(this.StaffId, CODE, NAME, BIRTHDAY, HOMETOWN, ROOM_ID, SALARY);
+            MessageBox.Show("Update thanh cong");
+            this.Close();
         }
     }
 }
