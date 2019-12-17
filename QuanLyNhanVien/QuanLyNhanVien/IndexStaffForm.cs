@@ -22,6 +22,13 @@ namespace QuanLyNhanVien
             this.btnDelete.Click += btnDelete_Click;
             this.grdDataStaff.DoubleClick += grdDataStaff_DoubleClick;
             this.btnStatistic.Click += btnStatistic_Click;
+            this.btnSort.Click += btnSort_Click;
+        }
+
+        void btnSort_Click(object sender, EventArgs e)
+        {
+            new SortForm().ShowDialog();
+            this.showStaFF();
         }
 
         void btnStatistic_Click(object sender, EventArgs e)
@@ -31,10 +38,6 @@ namespace QuanLyNhanVien
 
         void grdDataStaff_DoubleClick(object sender, EventArgs e)
         {
-            //var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
-            //var updateForm = new UpdateForm(@class.ID);
-            //updateForm.ShowDialog();
-            //this.showStaFF();
             if (this.grdDataStaff.SelectedRows.Count == 1)
             {
                 var row = this.grdDataStaff.SelectedRows[0];
@@ -48,12 +51,12 @@ namespace QuanLyNhanVien
         {
             if (this.grdDataStaff.SelectedRows.Count == 1)
             {
-                if (MessageBox.Show("Do you want to delete this?", "Confirm",
+                if (MessageBox.Show("Ban co muon xoa khong?", "Chap nhan",
                     MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
                     this.Business.DeleteStaff(@class.ID);
-                    MessageBox.Show("Delete class successfully.");
+                    MessageBox.Show("Xoa thanh cong.");
                     this.showStaFF();
                 }
             }
