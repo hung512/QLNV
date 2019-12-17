@@ -30,7 +30,7 @@ namespace QuanLyNhanVien
             var SortView = new SortView[sort.Length];
             for (int i = 0; i < sort.Length; i++)
                 SortView[i] = new SortView(sort[i]);
-            this.grdSort.DataSource = SortView.OrderBy(x => x.Room).ToList();
+            this.grdSort.DataSource = SortView.OrderBy(x => x.Salary).ToList();
         }
     }
 }

@@ -50,16 +50,16 @@ namespace QuanLyNhanVien
 
         void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.grdDataStaff.SelectedRows.Count == 1)
-            {
-                if (MessageBox.Show("Ban co muon xoa khong?", "Chap nhan",
-                    MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    var @class = (STAFF)this.grdDataStaff.SelectedRows[0].DataBoundItem;
-                    this.Business.DeleteStaff(@class.ID);
-                    MessageBox.Show("Xoa thanh cong.");
-                    this.showStaFF();
-                }
+           if(this.grdDataStaff.SelectedRows.Count == 1)
+           {
+               if (MessageBox.Show("Do you want to delete this?", "Confirm",
+                   MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+               {
+                   var @class = (StaffView)this.grdDataStaff.SelectedRows[0].DataBoundItem;
+                   this.Business.DeleteStaff(@class.id);
+                   MessageBox.Show("Delete class successfully.");
+                   this.showStaFF();
+               }
             }
         }
 
