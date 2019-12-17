@@ -39,7 +39,7 @@ namespace QuanLyNhanVien
 
         void btnCancel_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this.Close();
         }
 
         void btnSave_Click(object sender, EventArgs e)

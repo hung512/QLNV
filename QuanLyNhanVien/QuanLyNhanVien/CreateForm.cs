@@ -44,6 +44,7 @@ namespace QuanLyNhanVien
             this.cbbRoom.DataSource = this.Business.GetRooms();
             this.cbbRoom.DisplayMember = "Name";
             this.cbbRoom.ValueMember = "id";
+
         }
     }
 }
