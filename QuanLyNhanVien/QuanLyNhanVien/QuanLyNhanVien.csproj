@@ -145,6 +145,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SortForm.resx">
       <DependentUpon>SortForm.cs</DependentUpon>
@@ -193,6 +194,8 @@
     <Content Include="MyRoom_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\tải xuống %281%29.png" />
+    <None Include="Resources\wallhaven-j5dvww.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -40,6 +40,7 @@
             // 
             // grdDataStaff
             // 
+            this.grdDataStaff.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.grdDataStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDataStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDataStaff.Location = new System.Drawing.Point(0, 28);
@@ -90,6 +91,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyNhanVien.Properties.Resources.tải_xuống__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(552, 407);
             this.Controls.Add(this.grdDataStaff);
             this.Controls.Add(this.menuStrip1);

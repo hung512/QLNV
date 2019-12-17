@@ -34,6 +34,7 @@
             // 
             // grdStatistic
             // 
+            this.grdStatistic.BackgroundColor = System.Drawing.Color.Azure;
             this.grdStatistic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdStatistic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdStatistic.Location = new System.Drawing.Point(0, 0);
