@@ -44,6 +44,7 @@ namespace QuanLyNhanVien
                 var staffView = (StaffView)row.DataBoundItem;
 
                 new UpdateForm(staffView.id).ShowDialog();
+                this.showStaFF();
             }
         }
 
@@ -76,11 +77,11 @@ namespace QuanLyNhanVien
         private void showStaFF()
         {
             this.grdDataStaff.DataSource = this.Business.GetStaffs();
-            var students = this.Business.GetStaffs();
-            var studentsviews = new StaffView[students.Length];
-            for (int i = 0; i < students.Length; i++)
-                studentsviews[i] = new StaffView(students[i]);
-            this.grdDataStaff.DataSource = studentsviews;
+            var staffs = this.Business.GetStaffs();
+            var staffsviews = new StaffView[staffs.Length];
+            for (int i = 0; i < staffs.Length; i++)
+                staffsviews[i] = new StaffView(staffs[i]);
+            this.grdDataStaff.DataSource = staffsviews;
         }
 
     }

@@ -18,6 +18,7 @@ namespace QuanLyNhanVien
         {
             InitializeComponent();
             this.Business = new ClassManagement();
+            this.Load += CreateForm_Load;
             this.btnSave.Click += btnSave_Click;
             this.btnCancel.Click += btnCancel_Click;
         }
@@ -39,12 +40,12 @@ namespace QuanLyNhanVien
             MessageBox.Show("Tao moi thanh cong");
             this.Close();
         }
+
         void CreateForm_Load(object sender, EventArgs e)
         {
             this.cbbRoom.DataSource = this.Business.GetRooms();
             this.cbbRoom.DisplayMember = "Name";
             this.cbbRoom.ValueMember = "id";
-
         }
     }
 }
