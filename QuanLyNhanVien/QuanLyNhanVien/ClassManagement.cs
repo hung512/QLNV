@@ -61,5 +61,10 @@ namespace QuanLyNhanVien
             var db = new MyRoomEntities();
             return db.STAFFs.Find(id);
         }
+        public STAFF[] getSort()
+        {
+            var db = new MyRoomEntities();
+            return db.STAFFs.ToArray();
+        }
     }
 }
